@@ -1,0 +1,221 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Pay
+{% endblock %}
+
+{% block content %}
+<br>
+
+  <div class="jui-width-container">
+    <main role="main" class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+
+          <h1 class="govuk-heading-xl">Payment overview</h1>
+
+        </div>
+      </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+
+                  <h1 class="govuk-heading-l">Account</h1>
+
+                  <h2 class="govuk-heading-l"><a class="govuk-link govuk-!-font-size-24" href="/PBA0241463">PBA0241463</a><br>
+                   <span class="govuk-caption-m">£20,000.00
+                     <br>Credit  limit
+                     <br>
+                     <br>
+                   <p class="govuk-body govuk-!-font-size-36 govuk-!-font-weight-bold">£2746.00<span class="govuk-caption-m">Available to spend</span></p>
+                </h2>
+
+
+                <!-- <h3 class="govuk-heading-l govuk-!-font-weight-regular"><a class="govuk-link govuk-!-font-size-19" href="dummy">Statement summary</a><br>
+                  <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">£17,254.00<span class="govuk-caption-m">Next payment due <br>4 Aug 2018</span></p>
+                  <button type="submit" class="govuk-button">
+                  Make payment
+                </button>
+              </h3> -->
+
+
+
+
+                <ul class="govuk-list">
+                <li>
+                  <a class="govuk-link" href="/dummy">View statement</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="/dummy">Add an account</a>
+                </li>
+              </ul>
+
+
+
+
+
+                <!-- <h2 class="govuk-heading-l"><br>
+                 £2746.00<br>
+                 <span class="govuk-caption-m">Available to spend</span>
+              </h2> -->
+
+
+
+
+            <!-- <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="#">Add an account</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">Make a payment</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">Benefit fraud</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">More</a>
+          </li>
+        </ul> -->
+
+        <br>
+        <br>
+        <br>
+
+
+        </div>
+
+        <div class="govuk-grid-column-three-quarters">
+
+          <h1 class="govuk-heading-l">Transactions</h1>
+
+          <table class="govuk-body govuk-!-font-size-16">
+    <caption class="govuk-table__caption"></caption>
+    <thead class="govuk-!-font-size-16">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Payment reference</th>
+        <th class="govuk-table__header" scope="col">Case</th>
+        <th class="govuk-table__header" scope="col">Your reference</th>
+        <th class="govuk-table__header" scope="col">Approver</th>
+        <th class="govuk-table__header" scope="col">Status</th>
+        <th class="govuk-table__header" scope="col">Date</th>
+        <th class="govuk-table__header" scope="col">Amount</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-2352-6362-6257-7742<a/></td>
+        <td data-label="Case">DE0DE9F</td>
+        <td data-label="Your reference">Divorce 7</td>
+        <td data-label="Approver">James</td>
+        <td data-label="Status">Pending</td>
+        <td data-label="Date">30 Jul 2018</td>
+        <td data-label="Amount">-£550.00</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-9584-2521-7742-1457<a/></td>
+        <td data-label="Case">BR024GH</td>
+        <td data-label="Your reference">Probate 33</td>
+        <td data-label="Approver">Lucy</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">29 Jul 2018</td>
+        <td data-label="Amount">-£215.00</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-6124-1415-7215-1515<a/></td>
+        <td data-label="Case">FR03VW2</td>
+        <td data-label="Your reference">Divorce 6</td>
+        <td data-label="Approver">Joe</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">27 Jul 2018</td>
+        <td data-label="Amount">-£550.00</td>
+      </tr>
+
+      <tr class="linked-payment">
+        <td data-label="Payment reference" class="linked-payment-ref">DIRECT DEBIT PAYMENT</td>
+        <td data-label="Case">-</td>
+        <td data-label="Your reference">-</td>
+        <td data-label="Approver">-</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">26 Jul 2018</td>
+        <td data-label="Amount">+£2590.40</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-6124-1415-7215-1515<a/></td>
+        <td data-label="Case">DE024JD</td>
+        <td data-label="Your reference">Probate 32</td>
+        <td data-label="Approver">Joe</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">25 Jul 2018</td>
+        <td data-label="Amount">-£215.00</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-2234-2626-6772-1678<a/></td>
+        <td data-label="Case">FG083FG</td>
+        <td data-label="Your reference">Probate 31</td>
+        <td data-label="Approver">James</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">24 Jul 2018</td>
+        <td data-label="Amount">-£215.00</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-3467-6167-1676-7832<a/></td>
+        <td data-label="Case">DEF2593</td>
+        <td data-label="Your reference">Probate 30</td>
+        <td data-label="Approver">James</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">24 Jul 2018</td>
+        <td data-label="Amount">-£215.00</td>
+      </tr>
+
+      <tr>
+        <td data-label="Payment reference"><a href="/dummy">RC-7436-2522-7632-8363<a/></td>
+        <td data-label="Case">BR023FD</td>
+        <td data-label="Your reference">Divorce 5</td>
+        <td data-label="Approver">Lucy</td>
+        <td data-label="Status">Completed</td>
+        <td data-label="Date">23 Jul 2018</td>
+        <td data-label="Amount">-£550.00</td>
+      </tr>
+
+
+
+
+    </tbody>
+  </table>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

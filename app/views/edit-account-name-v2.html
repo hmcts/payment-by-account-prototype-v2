@@ -1,0 +1,118 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Change details
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+<div class="jui-width-container">
+
+<ul class="hmcts-primary-navigation__list">
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="#1">
+      Cases
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="#2">
+      Nav item 2
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" aria-current="page" href="/payment-overview">
+      Payments
+    </a>
+  </li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+  <div class="jui-width-container">
+
+    <br>
+
+          <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/payment-overview-v2">Payments</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/manage-account-v2">Manage account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">Change details</li>
+      </ol>
+      </div>
+
+    <main role="main" class="govuk-main-wrapper">
+
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h1 class="govuk-heading-xl">Change details</h1>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Account name
+            </label>
+            <span id="email-hint" class="govuk-hint">
+
+            </span>
+            <input class="govuk-input" id="email" name="email" type="text" value="Bluebird solicitors">
+          </div>
+
+
+          <br>
+
+          <a href="/manage-account-v2" role="button" class="govuk-button">
+            Submit
+          </a>
+
+          <br>
+
+          <a class="govuk-link govuk-!-font-size-19" href="/manage-account">Cancel</a>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

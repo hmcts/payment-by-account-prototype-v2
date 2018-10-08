@@ -1,0 +1,170 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Make payment
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+<div class="jui-width-container">
+
+<ul class="hmcts-primary-navigation__list">
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="#1">
+      Cases
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="#2">
+      Nav item 2
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" aria-current="page" href="/payment-overview">
+      Payments
+    </a>
+  </li>
+
+</ul>
+
+</div>
+
+</nav>
+
+  <div class="jui-width-container">
+
+    <div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/payment-overview">Payment overview</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">Make a payment</li>
+</ol>
+</div>
+    <main role="main" class="govuk-main-wrapper">
+
+
+
+      <div class="govuk-grid-row">
+
+
+        <div class="govuk-grid-column-one-half">
+
+
+          <h1 class="govuk-heading-xl">Make a payment
+          </h1>
+
+
+          <dl class="govuk-check-your-answers govuk-check-your-answers--short">
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Account number
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                PBA0241163
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+              </dd>
+            </div>
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Outstanding balance
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                £17,254.00
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Next payment due
+              </dt>
+              <dd class="govuk-check-your-answers__answer" id="pendingPayment">
+                1 Aug 2018
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  <span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <br>
+
+          <h3 class="govuk-heading-m">How much do you want to pay?</h3>
+
+
+
+
+        </div>
+        <br>
+
+      </div>
+
+        <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-one-quarter">
+
+
+
+
+
+          <div class="govuk-currency-input">
+            <label class="govuk-label" for="contact-by-email">
+            Amount
+          </label>
+            <div class="govuk-currency-input__inner">
+              <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+              <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+            </div>
+          </div>
+
+          <br>
+
+          <button type="submit" class="govuk-button">
+            Make payment
+          </button>
+
+          </div>
+            </div>
+
+
+
+
+
+    </main>
+  </div>
+
+
+
+{% endblock %}
+{% block page_scripts %}
+
+<script>
+
+pendingPayment();
+
+function pendingPayment() {
+  var dateField = document.getElementById('pendingPayment');
+  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
+}
+
+
+balanceYesterday();
+
+function balanceYesterday() {
+  var dateField = document.getElementById('balanceYesterday');
+  dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY');
+}
+
+</script>
+
+{% endblock %}
